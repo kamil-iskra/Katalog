@@ -1,8 +1,8 @@
 # Katalog
-Demonstracja wzorca projektowego - Kompozyt (Composite)
+## Demonstracja wzorca projektowego - Kompozyt (Composite)
 
-Kompozyt (Composite)
-Ogólnie
+Kompozyt (Composite)<br><br>
+Ogólnie<br><br>
 Jest przykładem wzorca strukturalnego. Pozwala na drzewiastą kompozycję obiektów w celu reprezentacji częściowych bądź całościowych hierarchii. Pozwala na wykonywanie operacji zarówno na obiektach złożonych z innych obiektów, jak i na każdym z obiektów z osobna.
 
 Zastosowanie
