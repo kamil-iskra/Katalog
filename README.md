@@ -66,13 +66,14 @@ interface Part {
 
 	public void setData(String s);
 }
-```<br><br>
+```
+<br><br>
 
 Deklaruje podstawowe operacje na obiektach – częściach (SimplePart) jak i grupach części (Group).<br><br>
 
 
 SimplePart.java (Liść)<br>
-<code>
+```java
 public class SimplePart implements Part {<br>
     private String name, data;<br>
     private double price;<br>
@@ -117,14 +118,16 @@ public class SimplePart implements Part {<br>
 	public String toString(){
 		return this.name;
 	}
-}</code><br><br>
+}
+```
+<br><br>
 
 Klasa SimplePart - podstawowej części (liścia) zawiera implementację metod interfejsu. Należy zauważyć, że metoda  addPart(Part part) jest pusta, nie realizuje żadnych operacji. Nie może być inaczej, ponieważ do pojedynczych części (liści) nie możemy dodawać grup (komponentów).
 <br><br>
 Z kolei w klasie przechowującej części (liście) mamy zaimplementowaną metodę addPart(Part part) która dodaje elemety podrzędne do kompozytu (w tym przypadku jest to grupa części).
 <br><br>
 Group.java (Kompozyt)<br>
-<code>
+```java
 public class Group implements Part {<br>
     private List<Part> parts = new ArrayList<Part>();<br>
     private String name, data;<br>
@@ -177,12 +180,15 @@ public class Group implements Part {<br>
 	public String toString(){
 		return this.name;
 	}
-}</code><br><br>
+}
+```
+<br><br>
 
 Warto zwrócić uwagę na różne implementacje tych samych metod ze względu na rodzaj obiektu. Na przykład metoda getData() odpowiedzialna jest za wyświetlanie danych o każdej z części jak i o całych grupach. Dla obiektów podstawowych wyświetla ona takie dane jak nazwa, cena oraz opis części. Dla grup obiektów natomiast oprócz danych grupy wyświetlane są także dane wszystkich obiektów podrzędnych w grupie. Podobnie działa metoda getPrice() zwracająca cenę części z katalogu. Dla grupy części zwraca natomiast zsumowaną cenę wszystkich obiektów podrzędnych.
 <br><br>
 
-Client.java (Klient) – fragment kodu<br><br><code>
+Client.java (Klient) – fragment kodu<br><br>
+```java
 …
 public void valueChanged(TreeSelectionEvent e) {
 		DefaultMutableTreeNode node =  (DefaultMutableTreeNode)tree
@@ -207,6 +213,8 @@ public void valueChanged(TreeSelectionEvent e) {
 		  wywołując metodę getData()*/
 		 contentPane.setText(part.getData());
 	}
-…    </code><br><br>
+…    
+```
+<br><br>
  
 Powyższy fragment kodu klienta pokazuje, że wszystkie elemnety drzewa (niezależnie od rodzaju obiektu) są traktowane jednakowo. Na rzecz każdego klikniętego przez użytkownika elementu drzewa wywoływana jest metoda getData() .    
