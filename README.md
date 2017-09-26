@@ -52,7 +52,7 @@ Program przedstawia prosty katalog z częściami motoryzacyjnymi. Składa się z
 <br><br>
 
 Part.java (Komponent)<br>
-<code>
+```java
 interface Part {
     public void addPart(Part part);
 
@@ -66,7 +66,7 @@ interface Part {
 
 	public void setData(String s);
 }
-</code><br><br>
+```<br><br>
 
 Deklaruje podstawowe operacje na obiektach – częściach (SimplePart) jak i grupach części (Group).<br><br>
 
